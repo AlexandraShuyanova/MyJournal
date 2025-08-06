@@ -32,6 +32,10 @@ export default defineConfig([
       quotes: ['error', 'single'],
       'react/prop-types': 'off',
       indent: ['error', 'tab'],
+      "no-unused-vars": [
+        "warn",
+        { "varsIgnorePattern": "^React$" }
+      ]
     },
     settings: {
       react: {
