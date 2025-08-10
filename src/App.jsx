@@ -7,6 +7,8 @@ import Content from './Layouts/Content/Content.jsx';
 import Header from './components/Header/Header.jsx';
 import JournalList from './components/JournalList/JournalList.jsx';
 import JournalAddButton from './components/JournalAddButoon/JournalAddButton.jsx';
+import React, {useState} from 'react';
+import JournalForm from './components/JournalForm/JournalForm.jsx';
 
 function App() {
 	const data = [
@@ -21,6 +23,7 @@ function App() {
 			text: 'Do mountaineering and mountain tourism'
 		}
 	];
+
 	return (
 		<div className='app'>
 			<LeftPanel>
@@ -44,7 +47,7 @@ function App() {
 				</JournalList>
 			</LeftPanel>
 			<Content>
-				Content
+				<JournalForm />
 			</Content>
 		</div>
 	);

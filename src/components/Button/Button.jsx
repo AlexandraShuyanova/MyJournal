@@ -1,15 +1,9 @@
 import './Button.css';
 import React from 'react';
 
-function Button() {
-
-	const [text, setText] = React.useState('Save');
-	const clicked = () => {
-		setText('Saved:)');
-	};
-
+function Button({text, onClick}) {
 	return (
-		<button onClick={clicked} className='button accent'>{text}</button>
+		<button className='button accent' onClick={onClick}>{text}</button>
 	);
 }
 
