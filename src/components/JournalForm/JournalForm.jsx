@@ -1,6 +1,7 @@
-import './JournalForm.css';
+import styles from './JournalForm.module.css';
 import React, {useState} from 'react';
 import Button from '../Button/Button.jsx';
+import cn from 'classnames';
 
 function JournalForm({onSubmit}) {
 
@@ -54,11 +55,35 @@ function JournalForm({onSubmit}) {
 
 	return (
 		<>
-			<form className="journal-form" onSubmit={addJournalItem}>
-				<input type="text" name="title" value={formData.title} style={{border: formValidState.title ? 'none' : '1px solid red'}} onChange={e => setFormData(prev => ({...prev, title: e.target.value}))}/>
-				<input type="date" name="date" value={formData.date} style={{border: formValidState.date ? 'none' : '1px solid red'}} onChange={e => setFormData(prev => ({...prev, date: e.target.value}))}/>
-				<input type="text" name="tag" value={formData.tag} onChange={e => setFormData(prev => ({...prev, tag: e.target.value}))}/>
-				<textarea name="text" id="" cols="30" rows="10" value={formData.text} style={{border: formValidState.text ? 'none' : '1px solid red'}} onChange={e => setFormData(prev => ({...prev, text: e.target.value}))}/>
+			<form className={styles['journal-form']} onSubmit={addJournalItem}>
+				<div>
+					<input type="text" name="title" value={formData.title} className={cn(styles['input-title'], {
+						[styles['invalid']]: !formValidState.title
+					})} onChange={e => setFormData(prev => ({...prev, title: e.target.value}))}/>
+				</div>
+				<div className={styles['form-row']}>
+					<label htmlFor="date" className={styles['form-label']}>
+						<img src="./date.svg" alt="Date icon"/>
+						<span>Date</span>
+					</label>
+					<input type="date" name="date" id="date" value={formData.date} className={cn(styles['input'], {
+							   [styles['invalid']] : !formValidState.date
+						   })}
+						   onChange={e => setFormData(prev => ({...prev, date: e.target.value}))}/>
+				</div>
+				<div className={styles['form-row']}>
+					<label htmlFor="tag" className={styles['form-label']}>
+						<img src="./folder.svg" alt="Folder icon"/>
+						<span>Tag</span>
+					</label>
+					<input type="text" name="tag" id="tag" value={formData.tag} className={styles['input']}
+						   onChange={e => setFormData(prev => ({...prev, tag: e.target.value}))}/>
+				</div>
+				<textarea name="text" id="" cols="30" rows="10" value={formData.text}
+						  className={cn(styles['input'], {
+							  [styles['invalid']]: !formValidState.text
+						  })}
+						  onChange={e => setFormData(prev => ({...prev, text: e.target.value}))}/>
 				<Button text="Save"/>
 			</form>
 		</>
