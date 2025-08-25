@@ -5,6 +5,16 @@ import cn from 'classnames';
 
 function JournalForm({onSubmit}) {
 
+	const INITIAL_FORM_DATA =
+		{
+			title: '',
+			date: '',
+			tag: '',
+			text: ''
+		};
+
+	const [formData, setFormData] = useState([]);
+
 	const [formValidState, setFormValidState] = useState({
 		title: true,
 		date: true,
@@ -40,18 +50,8 @@ function JournalForm({onSubmit}) {
 			return;
 		}
 		onSubmit(formProps);
-		setFormData(INITIAL_DATA);
+		setFormData(INITIAL_FORM_DATA);
 	};
-
-	const INITIAL_DATA =
-		{
-			title: '',
-			date: '',
-			tag: '',
-			text: ''
-		};
-
-	const [formData, setFormData] = useState(INITIAL_DATA);
 
 	return (
 		<>

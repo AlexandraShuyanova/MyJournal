@@ -7,26 +7,28 @@ import Content from './Layouts/Content/Content.jsx';
 import Header from './components/Header/Header.jsx';
 import JournalList from './components/JournalList/JournalList.jsx';
 import JournalAddButton from './components/JournalAddButoon/JournalAddButton.jsx';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import JournalForm from './components/JournalForm/JournalForm.jsx';
 
 function App() {
-	const INITIAL_DATA = [
-		/*{
-			id: 1,
-			title: 'Preparing for course updates',
-			date: new Date(),
-			text: 'Mountain hikes reveal amazing landscapes'
-		},
-		{
-			id: 2,
-			title: 'Journal',
-			date: new Date(),
-			text: 'Do mountaineering and mountain tourism'
-		}*/
-	];
 
-	const [items, setItems] = useState(INITIAL_DATA);
+	const [items, setItems] = useState([]);
+
+	useEffect(() => {
+		const data = JSON.parse(localStorage.getItem('data'));
+		if (data) {
+			setItems(data.map(item => ({
+				...item,
+				date: new Date(item.date)
+			})));
+		}
+	}, []);
+
+	useEffect(() => {
+		if (items.length) {
+			localStorage.setItem('data', JSON.stringify(items));
+		}
+	}, [items]);
 
 	const addItem = item => {
 		setItems(oldItems => [...oldItems, {
