@@ -54,7 +54,7 @@ function JournalForm({onSubmit}) {
 	return (
 		<>
 			<form className={styles['journal-form']} onSubmit={addJournalItem}>
-				<div>
+				<div className={styles['form-row']}>
 					<Input type="text" name="title" isValid={isValid.title} ref={titleRef} value={values.title} appearance="title"
 						   onChange={onChange}/>
 				</div>
