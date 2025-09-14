@@ -7,9 +7,10 @@ import Content from './Layouts/Content/Content.jsx';
 import Header from './components/Header/Header.jsx';
 import JournalList from './components/JournalList/JournalList.jsx';
 import JournalAddButton from './components/JournalAddButoon/JournalAddButton.jsx';
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import JournalForm from './components/JournalForm/JournalForm.jsx';
 import {useLocalstorage} from './hooks/use-localstorage.hook.js';
+import {UserContextProvider} from './context/user.context.jsx';
 
 function mapItems(items) {
 	if (!Array.isArray(items)) return [];
@@ -20,29 +21,30 @@ function mapItems(items) {
 }
 
 function App() {
-
-	const [items, setItems] = useLocalstorage('data');
+	const [items, setItems] = useLocalstorage('data' );
 
 	const addItem = (item) => {
 		setItems([...mapItems(items), {
-			title: item.title,
-			text: item.text,
+			...item,
 			date: new Date(item.date),
-			id: items.length > 0 ? Math.max(...items.map(el => el.id)) + 1 : 1
+			id: items.length > 0 ? Math.max(...items.map(i => i.id)) + 1 : 1.
 		}]);
 	};
 
 	return (
-		<div className='app'>
-			<LeftPanel>
-				<Header/>
-				<JournalAddButton/>
-				<JournalList items={mapItems(items)}/>
-			</LeftPanel>
-			<Content>
-				<JournalForm onSubmit={item => addItem(item)}/>
-			</Content>
-		</div>
+		<UserContextProvider>
+			<div className='app'>
+				<LeftPanel>
+					<Header/>
+					<JournalAddButton/>
+					<JournalList items={mapItems(items)}/>
+				</LeftPanel>
+				<Content>
+					<JournalForm onSubmit={item => addItem(item)}/>
+				</Content>
+			</div>
+		</UserContextProvider>
+
 	);
 }
 

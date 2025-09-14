@@ -1,14 +1,14 @@
 import {useEffect, useState} from 'react';
 
 export function useLocalstorage(key) {
-	const [data, setData] = useState();
+	const [data, setData] = useState([]);
 
 	useEffect(() => {
-		const res = JSON.parse(localStorage.getItem(key));
-		if (res) {
-			setData(res);
-		}
-	}, []);
+		const raw = localStorage.getItem(key);
+		const res = raw ? JSON.parse(raw) : [];
+
+		setData(res);
+	},[]);
 
 	const saveData = (newData) => {
 		localStorage.setItem(key, JSON.stringify(newData));
