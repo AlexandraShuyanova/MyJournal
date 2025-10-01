@@ -1,12 +1,12 @@
 import styles from './JournalForm.module.css';
-import React, {useContext, useEffect, useReducer, useRef, useState} from 'react';
+import React, {useContext, useEffect, useReducer, useRef} from 'react';
 import Button from '../Button/Button.jsx';
 import cn from 'classnames';
 import {formReducer, INITIAL_STATE} from './JournalForm.state.js';
 import Input from '../Input/Input.jsx';
 import {UserContext} from '../../context/user.context.jsx';
 
-function JournalForm({onSubmit}) {
+function JournalForm({onSubmit, selectedItem}) {
 
 	const [formState, dispatchForm] = useReducer(formReducer, INITIAL_STATE);
 	const {isValid, isFormReadyToSubmit, values} = formState;
@@ -25,6 +25,12 @@ function JournalForm({onSubmit}) {
 	};
 
 	useEffect(() => {
+		if (selectedItem) {
+			dispatchForm({type: 'SET_DATA', payload:{...selectedItem}});
+		}
+	}, [selectedItem]);
+
+	useEffect(() => {
 		let timerId;
 		if (!isValid.title || !isValid.date || !isValid.text) {
 			timerId = setTimeout(() => {
@@ -40,7 +46,8 @@ function JournalForm({onSubmit}) {
 	useEffect(() => {
 		if (isFormReadyToSubmit) {
 			onSubmit(values);
-			dispatchForm({type: 'RESET_DATA'});
+			dispatchForm({type: 'CLEAR'});
+			dispatchForm({type: 'SET_DATA', payload: {userId}});
 		}
 	}, [isFormReadyToSubmit, values, onSubmit]);
 
@@ -68,7 +75,7 @@ function JournalForm({onSubmit}) {
 					<img src="./date.svg" alt="Date icon"/>
 					<span>Date</span>
 				</label>
-				<Input type="date" name="date" isValid={isValid.date} ref={dateRef} id="date" value={values.date}
+				<Input type="date" name="date" isValid={isValid.date} ref={dateRef} id="date" value={values.date ? new Date(values.date).toISOString().slice(0, 10) : '' }
 					   onChange={onChange}/>
 			</div>
 			<div className={styles['form-row']}>
@@ -84,7 +91,7 @@ function JournalForm({onSubmit}) {
 						  [styles['invalid']]: !isValid.text
 					  })}
 					  onChange={onChange}/>
-			<Button text="Save"/>
+			<Button>Save</Button>
 		</form>
 	);
 }

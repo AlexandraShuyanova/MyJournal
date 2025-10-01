@@ -35,12 +35,11 @@ export function formReducer(state, action) {
 		};
 	}
 
-	case 'RESET_DATA':
+	case 'CLEAR':
 		return {...state, values: INITIAL_STATE.values, isFormReadyToSubmit: false};
 
 	case 'RESET_VALIDITY':
 		return {...state, isValid: INITIAL_STATE.isValid};
 	}
-
 }
 
