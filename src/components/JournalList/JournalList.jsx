@@ -20,7 +20,7 @@ function JournalList({items, setItem}) {
 		.sort(sortItems), [items, userId]);
 
 	if (items.length === 0) {
-		return <p>No memories for now. Add some!</p>;
+		return <p>No notes for now. Add some!</p>;
 	}
 
 	return <>

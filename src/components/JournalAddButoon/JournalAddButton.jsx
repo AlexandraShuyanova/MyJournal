@@ -5,7 +5,7 @@ function JournalAddButton({children, clearForm}) {
 	return (
 		<CardButton className='journal-add' onClick={clearForm}>
 			<img src="./plus.svg" alt="plus"></img>
-			New memory
+			New note
 		</CardButton>
 	);
 }
