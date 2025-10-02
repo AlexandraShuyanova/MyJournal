@@ -4,9 +4,10 @@ import React, {forwardRef} from 'react';
 
 const Input = forwardRef(function Input({className, isValid=true, appearance, ...props}, ref) {
 	return (
-		<input {...props} ref={ref} className={cn(className, styles['input'], {
+		<input {...props} ref={ref} className={cn(styles['input'], className, {
 			[styles['invalid']]: !isValid,
-			[styles['input-title']]: appearance === 'title'
+			[styles['input-title']]: appearance === 'title',
+			[styles['input-date']]: appearance === 'date'
 		})}/>
 	);
 });

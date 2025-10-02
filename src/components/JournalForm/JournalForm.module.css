@@ -13,7 +13,7 @@
 
 .form-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 50px;
 }
 
@@ -29,11 +29,6 @@
     border-bottom: 1px solid #323232;
     flex: 1;
     min-width: 0;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-    cursor: pointer;
 }
 
 .invalid {
@@ -53,6 +48,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .delete:hover {
     background:rgb(255, 255, 255, 0.05);
     border-radius: 50%;
+}
+
+.textarea {
+    min-height: 200px;
+    resize: vertical;
 }
 
 

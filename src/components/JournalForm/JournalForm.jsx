@@ -88,7 +88,7 @@ function JournalForm({onSubmit, selectedItem, onRemove}) {
 					<img src="./date.svg" alt="Date icon"/>
 					<span>Date</span>
 				</label>
-				<Input type="date" name="date" isValid={isValid.date} ref={dateRef} id="date" value={values.date ? new Date(values.date).toISOString().slice(0, 10) : '' }
+				<Input type="date" name="date" isValid={isValid.date} ref={dateRef} id="date" appearance="date" value={values.date ? new Date(values.date).toISOString().slice(0, 10) : '' }
 					   onChange={onChange}/>
 			</div>
 			<div className={styles['form-row']}>
@@ -99,11 +99,13 @@ function JournalForm({onSubmit, selectedItem, onRemove}) {
 				<Input type="text" name="tag" id="tag" value={values.tag}
 					   onChange={onChange}/>
 			</div>
-			<textarea name="text" id="" ref={textRef} cols="30" rows="10" value={values.text}
-					  className={cn(styles['input'], {
-						  [styles['invalid']]: !isValid.text
-					  })}
-					  onChange={onChange}/>
+			<div className={styles['form-row']}>
+				<textarea name="text" id="" ref={textRef} cols="30" rows="10" value={values.text}
+						  className={cn(styles['input'], styles['textarea'], {
+							  [styles['invalid']]: !isValid.text
+						  })}
+						  onChange={onChange}/>
+			</div>
 			<Button>Save</Button>
 		</form>
 	);

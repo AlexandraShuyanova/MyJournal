@@ -12,6 +12,15 @@
     min-width: 0;
 }
 
+.input-date {
+    flex: 0 0 120px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
 .input-title {
     font-size: 32px;
 }
