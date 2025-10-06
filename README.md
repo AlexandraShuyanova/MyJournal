@@ -1,3 +1,73 @@
-# MyJournal
+# React Note-Taking App
 
-Project MyJournal written on React.
+A simple and interactive note-taking application built with React. Users can create, edit, and delete notes, with data stored in the browser's LocalStorage. The app features a responsive design and uses React Hooks for state management.
+
+
+## Demo
+
+Live Demo: [GitHub Pages](https://alexandrashuyanova.github.io/MyJournal/)
+
+## Features
+
+- Create, edit, and delete notes
+- Switch between different users (implemented with React Context)
+- Notes are saved in LocalStorage for persistence
+- Responsive design for mobile and desktop
+- Utilizes React Hooks: `useState`, `useEffect`, and custom hooks
+
+## Technologies
+
+- React
+- React Context API (`createContext`, `useContext`)
+- JavaScript (ES6+)
+- LocalStorage
+- CSS / Styled Components
+- GitHub Pages (hosting)
+
+## Why I Built This Project
+
+I created this project to improve my skills in React and deepen my understanding of state management using Hooks and Context. Working on this app allowed me to experiment with:
+
+- Creating reusable and custom Hooks
+- Managing global state with React Context (user switching functionality)
+- Persisting data in LocalStorage
+- Building a responsive and user-friendly interface
+- Structuring a project independently from start to finish
+
+This project also helped me gain confidence in showcasing my work publicly and preparing for real-world development scenarios.
+
+## Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/AlexandraShuyanova/MyJournal.git
+
+2. Install dependencies
+```bash
+npm install
+
+3. Start the development server
+```bash
+npm start
+
+## Learnings & Personal Contribution
+
+Developed strong skills in React Hooks and custom hooks
+
+Learned to manage global state using React Context (createContext, useContext)
+
+Learned to persist data using LocalStorage
+
+Built a responsive and user-friendly interface
+
+Improved project organization and self-management skills
+
+## Links
+
+Live Demo: [GitHub Pages](https://alexandrashuyanova.github.io/MyJournal/)
+
+Source Code: [GitHub Repository] (https://github.com/AlexandraShuyanova/MyJournal)
+
+
+
+
