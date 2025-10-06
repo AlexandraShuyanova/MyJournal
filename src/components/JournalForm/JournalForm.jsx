@@ -100,7 +100,7 @@ function JournalForm({onSubmit, selectedItem, onRemove}) {
 					   onChange={onChange}/>
 			</div>
 			<div className={styles['form-row']}>
-				<textarea name="text" id="" ref={textRef} cols="30" rows="10" value={values.text}
+				<textarea name="text" id="text" ref={textRef} cols="30" rows="10" value={values.text}
 						  className={cn(styles['input'], styles['textarea'], {
 							  [styles['invalid']]: !isValid.text
 						  })}

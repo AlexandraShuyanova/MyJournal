@@ -20,7 +20,7 @@
 .input {
     border: none;
     background: none;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Source Sans 3', sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -53,6 +53,7 @@
 .textarea {
     min-height: 200px;
     resize: vertical;
+    font-size: 18px;
 }
 
 
