@@ -10,8 +10,7 @@ Live Demo: [GitHub Pages](https://alexandrashuyanova.github.io/MyJournal/)
 ### App Preview
 
 <p align="center">
-  <img src="./gifs/switchUser.gif" width="260" />
-  <img src="./gifs/switchUserHigh.gif" width="260" />
+  <img src="./gifs/switchUserHigh.gif" width="300" />
 </p>
 
 ## Features
