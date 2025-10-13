@@ -1,6 +1,6 @@
 # React Note-Taking App
 
-A simple and interactive note-taking application built with React. Users can create, edit, and delete notes, with data stored in the browser's LocalStorage. The app features a responsive design and uses React Hooks for state management.
+A simple and interactive note-taking application built with React. Users can add, edit, and delete notes, with data stored in the browser's LocalStorage. Notes are **sorted by newest first**, so the most recent notes appear at the top. The app features a responsive design and uses React Hooks for state management.
 
 
 ## 🚀 Demo
@@ -13,17 +13,17 @@ Below are short GIF previews of key features of the app 👇
 
 Easily switch between different users using React Context. Each user has their own set of notes stored in LocalStorage.
 
-![Switch user demo](./gifs/switch-user.gif)
+![Switch user demo](./gifs/switch-user-loop.gif)
 
 ### ✏️ Edit Existing Note
 
 Open an existing note, make changes, and save — updates appear instantly thanks to React Hooks and LocalStorage.
 
-![Edit note demo](./gifs/edit-note.gif)
+![Edit note demo](./gifs/edit-note-loop.gif)
 
 ### ➕ Add New Note
 
-When you click **“New note”**, all fields are cleared (even if another note was selected), allowing you to start fresh and add a new note.
+When you click **“Add Note”**, all fields are cleared (even if another note was selected), allowing you to start fresh and add a new note. Newly added notes appear at the **top of the list**.
 
 ![Add note demo](./gifs/add-new-note-loop.gif)
 
@@ -31,7 +31,7 @@ When you click **“New note”**, all fields are cleared (even if another note 
 
 Remove any note instantly. The note list updates automatically, and data persists correctly in LocalStorage.
 
-![Delete note demo](./gifs/delete-note.gif)
+![Delete note demo](./gifs/delete-note-loop.gif)
 
 ---
 
@@ -39,6 +39,7 @@ Remove any note instantly. The note list updates automatically, and data persist
 
 - Create, edit, and delete notes
 - Switch between different users (implemented with React Context)
+- Notes are **sorted by newest first** (most recent notes appear at the top) 
 - Notes are saved in LocalStorage for persistence
 - Responsive design for mobile and desktop
 - Utilizes React Hooks: `useState`, `useEffect`, and custom hooks
