@@ -128,7 +128,7 @@ npm start
 
 - 🌐 **Live Demo:** [GitHub Pages](https://alexandrashuyanova.github.io/MyJournal/)
 
-- 💻 **Source Code:** [GitHub Repository] (https://github.com/AlexandraShuyanova/MyJournal)
+- 💻 **Source Code:** [GitHub Repository](https://github.com/AlexandraShuyanova/MyJournal)
 
 
 
