@@ -37,12 +37,13 @@ Remove any note instantly. The note list updates automatically, and data persist
 
 ## ✨ Features
 
-- Create, edit, and delete notes
-- Switch between different users (implemented with React Context)
-- Notes are sorted by newest first (most recent notes appear at the top) 
-- Notes are saved in LocalStorage for persistence
-- Responsive design for mobile and desktop
-- Utilizes React Hooks:
+- ➕ Add, edit, and delete notes  
+- 🧍‍♂️ Switch between different users (via React Context)  
+- 💾 Notes are saved in LocalStorage for persistence  
+- 📄 Notes are sorted by newest first (most recent notes appear at the top)  
+- 📱 Responsive design for mobile and desktop  
+- ✏️ Form validation: required fields (title, text, date) are highlighted if empty, and focus moves to the first missing field (implemented using `useRef`)  
+- ⚛️ Utilizes React Hooks:
   - `useState`, `useEffect`, `useRef`, `useMemo`, `useCallback`, `useContext`, `useReducer`
 
 ---
