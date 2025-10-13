@@ -1,6 +1,6 @@
 # React Note-Taking App
 
-A simple and interactive note-taking application built with React. Users can add, edit, and delete notes, with data stored in the browser's LocalStorage. Notes are **sorted by newest first**, so the most recent notes appear at the top. The app features a responsive design and uses React Hooks for state management.
+A simple and interactive note-taking application built with React. Users can add, edit, and delete notes, with data stored in the browser's LocalStorage. Notes are sorted by newest first, so the most recent notes appear at the top. The app features a responsive design and uses React Hooks for state management.
 
 
 ## 🚀 Demo
@@ -23,7 +23,7 @@ Open an existing note, make changes, and save — updates appear instantly thank
 
 ### ➕ Add New Note
 
-When you click **“Add Note”**, all fields are cleared (even if another note was selected), allowing you to start fresh and add a new note. Newly added notes appear at the **top of the list**.
+When you click **“Add Note”**, all fields are cleared (even if another note was selected), allowing you to start fresh and add a new note. Newly added notes appear at the top of the list.
 
 ![Add note demo](./gifs/add-new-note-loop.gif)
 
@@ -39,12 +39,14 @@ Remove any note instantly. The note list updates automatically, and data persist
 
 - Create, edit, and delete notes
 - Switch between different users (implemented with React Context)
-- Notes are **sorted by newest first** (most recent notes appear at the top) 
+- Notes are sorted by newest first (most recent notes appear at the top) 
 - Notes are saved in LocalStorage for persistence
 - Responsive design for mobile and desktop
 - Utilizes React Hooks: `useState`, `useEffect`, and custom hooks
 
-## Technologies
+---
+
+## 🛠️ Technologies
 
 - React
 - React Context API (`createContext`, `useContext`)
@@ -53,7 +55,9 @@ Remove any note instantly. The note list updates automatically, and data persist
 - CSS / Styled Components
 - GitHub Pages (hosting)
 
-## Why I Built This Project
+---
+
+## 💡 Why I Built This Project
 
 I created this project to improve my skills in React and deepen my understanding of state management using Hooks and Context. Working on this app allowed me to experiment with:
 
@@ -65,37 +69,44 @@ I created this project to improve my skills in React and deepen my understanding
 
 This project also helped me gain confidence in showcasing my work publicly and preparing for real-world development scenarios.
 
-## Installation
+---
 
-1. Clone the repository
+## ⚙️ Installation
+
+1. ***Clone the repository***
 ```bash
 git clone https://github.com/AlexandraShuyanova/MyJournal.git
+```
 
-2. Install dependencies
+2. ***Install dependencies***
 ```bash
 npm install
+```
 
-3. Start the development server
+3. ***Start the development server***
 ```bash
 npm start
+```
 
-## Learnings & Personal Contribution
+## 📚 Learnings & Personal Contribution
 
-Developed strong skills in React Hooks and custom hooks
+- Developed strong skills in React Hooks and custom hooks
 
-Learned to manage global state using React Context (createContext, useContext)
+- Learned to manage global state using React Context (createContext, useContext)
 
-Learned to persist data using LocalStorage
+- Learned to persist data using LocalStorage
 
-Built a responsive and user-friendly interface
+- Built a responsive and user-friendly interface
 
-Improved project organization and self-management skills
+- Improved project organization and self-management skills
 
-## Links
+---
 
-Live Demo: [GitHub Pages](https://alexandrashuyanova.github.io/MyJournal/)
+## 🔗 Links
 
-Source Code: [GitHub Repository] (https://github.com/AlexandraShuyanova/MyJournal)
+- 🌐 **Live Demo:** [GitHub Pages](https://alexandrashuyanova.github.io/MyJournal/)
+
+- 💻 **Source Code:** [GitHub Repository] (https://github.com/AlexandraShuyanova/MyJournal)
 
 
 
