@@ -25,7 +25,7 @@ Open an existing note, make changes, and save — updates appear instantly thank
 
 When you click **“New note”**, all fields are cleared (even if another note was selected), allowing you to start fresh and add a new note.
 
-![Add note demo](./gifs/add-new-note.gif)
+![Add note demo](./gifs/add-new-note-loop.gif)
 
 ### 🗑️ Delete Note
 
