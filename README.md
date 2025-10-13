@@ -23,7 +23,7 @@ Open an existing note, make changes, and save — updates appear instantly thank
 
 ### ➕ Add New Note
 
-When you click **“Add Note”**, all fields are cleared (even if another note was selected), allowing you to start fresh and add a new note. Newly added notes appear at the top of the list.
+When you click **“Add Note”**, all fields are cleared (even if another note was selected), allowing you to start fresh and add a new note. The form state is managed using `useReducer`, making it easier to handle complex form logic. Newly added notes appear at the top of the list.
 
 ![Add note demo](./gifs/add-new-note-loop.gif)
 
@@ -42,7 +42,8 @@ Remove any note instantly. The note list updates automatically, and data persist
 - Notes are sorted by newest first (most recent notes appear at the top) 
 - Notes are saved in LocalStorage for persistence
 - Responsive design for mobile and desktop
-- Utilizes React Hooks: `useState`, `useEffect`, and custom hooks
+- Utilizes React Hooks:
+  - `useState`, `useEffect`, `useRef`, `useMemo`, `useCallback`, `useContext`, `useReducer`
 
 ---
 
@@ -54,6 +55,18 @@ Remove any note instantly. The note list updates automatically, and data persist
 - LocalStorage
 - CSS / Styled Components
 - GitHub Pages (hosting)
+
+---
+
+## ⚛️ Hooks Used
+
+- `useState` – for component state management  
+- `useEffect` – for side effects and data persistence  
+- `useRef` – for accessing DOM elements and storing mutable values  
+- `useMemo` – for memoizing expensive calculations  
+- `useCallback` – for memoizing functions  
+- `useContext` – for global state (user switching)  
+- `useReducer` – specifically for managing form state logic (Add/Edit Note form)
 
 ---
 
