@@ -7,6 +7,13 @@ A simple and interactive note-taking application built with React. Users can cre
 
 Live Demo: [GitHub Pages](https://alexandrashuyanova.github.io/MyJournal/)
 
+### App Preview
+
+<p align="center">
+  <img src="./gifs/switchUser.gif" width="260" />
+  <img src="./gifs/switchUserHigh.gif" width="260" />
+</p>
+
 ## Features
 
 - Create, edit, and delete notes
