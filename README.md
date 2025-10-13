@@ -13,25 +13,33 @@ Below are short GIF previews of key features of the app 👇
 
 Easily switch between different users using React Context. Each user has their own set of notes stored in LocalStorage.
 
-![Switch user demo](./gifs/switch-user-loop.gif)
+![Switch user demo](./gifs/switch-user.gif)
 
 ### ✏️ Edit Existing Note
 
 Open an existing note, make changes, and save — updates appear instantly thanks to React Hooks and LocalStorage.
 
-![Edit note demo](./gifs/edit-note-loop.gif)
+![Edit note demo](./gifs/edit-note.gif)
 
 ### ➕ Add New Note
 
 When you click **“Add Note”**, all fields are cleared (even if another note was selected), allowing you to start fresh and add a new note. The form state is managed using `useReducer`, making it easier to handle complex form logic. Newly added notes appear at the top of the list.
 
-![Add note demo](./gifs/add-new-note-loop.gif)
+![Add note demo](./gifs/add-new-note.gif)
 
 ### 🗑️ Delete Note
 
 Remove any note instantly. The note list updates automatically, and data persists correctly in LocalStorage.
 
-![Delete note demo](./gifs/delete-note-loop.gif)
+![Delete note demo](./gifs/delete-note.gif)
+
+---
+
+### ⚠️ Form Validation Highlight
+If the user tries to add or edit a note without filling in all required fields (title, text, or date), the empty fields are **highlighted in red for 2 seconds**, and the **focus automatically moves** to the first incomplete field.  
+This feature uses `useRef` to manage input focus and improve the user experience.
+
+![Form validation demo](./gifs/form-validation.gif)
 
 ---
 
