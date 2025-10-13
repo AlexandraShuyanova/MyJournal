@@ -63,7 +63,7 @@ Remove any note instantly. The note list updates automatically, and data persist
 
 - `useState` – for component state management  
 - `useEffect` – for side effects and data persistence  
-- `useRef` – for accessing DOM elements and storing mutable values  
+- `useRef` – for accessing DOM elements and storing mutable values, managing input focus, and implementing form validation highlighting   
 - `useMemo` – for memoizing expensive calculations  
 - `useCallback` – for memoizing functions  
 - `useContext` – for global state (user switching)  
