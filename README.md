@@ -3,17 +3,39 @@
 A simple and interactive note-taking application built with React. Users can create, edit, and delete notes, with data stored in the browser's LocalStorage. The app features a responsive design and uses React Hooks for state management.
 
 
-## Demo
+## 🚀 Demo
 
-Live Demo: [GitHub Pages](https://alexandrashuyanova.github.io/MyJournal/)
+**Live Demo:** [GitHub Pages](https://alexandrashuyanova.github.io/MyJournal/)
 
-### App Preview
+Below are short GIF previews of key features of the app 👇
 
-<p align="center">
-  <img src="./gifs/switchUserHigh.gif" width="300" />
-</p>
+### 🧍‍♂️ Switch Between Users
 
-## Features
+Easily switch between different users using React Context. Each user has their own set of notes stored in LocalStorage.
+
+![Switch user demo](./gifs/switch-user.gif)
+
+### ✏️ Edit Existing Note
+
+Open an existing note, make changes, and save — updates appear instantly thanks to React Hooks and LocalStorage.
+
+![Edit note demo](./gifs/edit-note.gif)
+
+### ➕ Add New Note
+
+When you click **“New note”**, all fields are cleared (even if another note was selected), allowing you to start fresh and add a new note.
+
+![Add note demo](./gifs/add-new-note.gif)
+
+### 🗑️ Delete Note
+
+Remove any note instantly. The note list updates automatically, and data persists correctly in LocalStorage.
+
+![Delete note demo](./gifs/delete-note.gif)
+
+---
+
+## ✨ Features
 
 - Create, edit, and delete notes
 - Switch between different users (implemented with React Context)
